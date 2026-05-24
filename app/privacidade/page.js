@@ -145,12 +145,6 @@ export default function PrivacidadePage() {
           </p>
         </section>
 
-        <div className="legal-foot">
-          <Link href="/cadastro" className="btn btn-primary btn-sm">
-            Voltar ao cadastro
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-          </Link>
-        </div>
       </article>
     </main>
   );

@@ -5,7 +5,11 @@
       "Bash(git init *)",
       "Bash(git remote *)",
       "Bash(git ls-remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -c user.email=volucercom@gmail.com -c user.name=renanarp1997 commit -m ' *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
     ]
   }
 }

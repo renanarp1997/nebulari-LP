@@ -8,6 +8,7 @@ import { WHATSAPP_NUMBER, whatsAppUrl } from "../data/products";
 const NAV_ITEMS = [
   { hash: "#inicio", label: "Início" },
   { hash: "#edicoes", label: "Edições" },
+  { hash: "/termos", label: "Legal", external: true },
   { hash: "#sobre", label: "Sobre" },
   { hash: "#contato", label: "Contato" },
 ];
@@ -81,11 +82,13 @@ export default function Header() {
 
         <nav className="main-nav">
           {NAV_ITEMS.map((item) => {
-            const href = isHome ? item.hash : `/${item.hash}`;
-            const isActive = isHome && active === item.hash;
+            const href = item.external
+              ? item.hash
+              : isHome ? item.hash : `/${item.hash}`;
+            const isActive = !item.external && isHome && active === item.hash;
             return (
               <Link
-                key={item.hash}
+                key={item.label}
                 href={href}
                 className={`nav-link${isActive ? " active" : ""}`}
               >
