@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nebulari — Chaveiros que contam histórias</title>
+  <link rel="icon" href="public/logo-tight.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="8" fill="#7C3AED"/>
+            <path d="M3 19 Q16 11, 29 14" stroke="#7C3AED" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <path d="M3 19 Q16 27, 29 14" stroke="#7C3AED" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0"/>
+          </svg>
+        </span>
+        <span class="brand-name">Nebulari</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#colecoes" class="nav-link">Coleções</a>
+        <a href="#personalizados" class="nav-link">Personalizados</a>
+        <a href="#sobre" class="nav-link">Sobre nós</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn" aria-label="Conta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Carrinho">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          <span class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <span class="pill">
+          <span class="pill-dot">+</span>
+          CHAVEIROS QUE CONTAM HISTÓRIAS
+        </span>
+        <h1 class="hero-title">
+          Pequenos detalhes.<br />
+          Grandes <span class="text-accent">conexões.</span>
+        </h1>
+        <p class="hero-desc">
+          Na Nebulari, cada chaveiro é feito para acompanhar você em todos os momentos,
+          carregando estilo, significado e qualidade.
+        </p>
+        <div class="hero-cta">
+          <a href="#colecoes" class="btn btn-primary">
+            Comprar agora
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#colecoes" class="btn btn-outline">Ver coleções</a>
+        </div>
+        <ul class="hero-features">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg>
+            Design exclusivo
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+            Materiais premium
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Feito para durar
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-bg-circle"></div>
+
+        <!-- Fallback SVG illustration (shown if hero-img not present) -->
+        <svg class="hero-fallback" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="planetGrad" cx="35%" cy="32%" r="75%">
+              <stop offset="0%" stop-color="#A78BFA"/>
+              <stop offset="50%" stop-color="#5B21B6"/>
+              <stop offset="100%" stop-color="#1E1147"/>
+            </radialGradient>
+            <linearGradient id="ringMetal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F3F4F6"/>
+              <stop offset="50%" stop-color="#9CA3AF"/>
+              <stop offset="100%" stop-color="#374151"/>
+            </linearGradient>
+            <linearGradient id="tagMetal" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1F2937"/>
+              <stop offset="100%" stop-color="#0B1220"/>
+            </linearGradient>
+            <radialGradient id="discGrad" cx="50%" cy="40%" r="65%">
+              <stop offset="0%" stop-color="#312269"/>
+              <stop offset="60%" stop-color="#15103A"/>
+              <stop offset="100%" stop-color="#070518"/>
+            </radialGradient>
+          </defs>
+          <!-- Big metal key ring at top -->
+          <circle cx="260" cy="80" r="44" fill="none" stroke="url(#ringMetal)" stroke-width="12"/>
+          <!-- Connector link -->
+          <ellipse cx="260" cy="138" rx="9" ry="16" fill="none" stroke="url(#ringMetal)" stroke-width="5"/>
+          <!-- Pendant disc -->
+          <circle cx="260" cy="305" r="160" fill="url(#discGrad)" stroke="url(#ringMetal)" stroke-width="9"/>
+          <!-- Stars on disc -->
+          <g fill="#fff">
+            <circle cx="170" cy="230" r="1.6"/><circle cx="195" cy="210" r="1.2"/>
+            <circle cx="335" cy="220" r="2"/><circle cx="355" cy="265" r="1.4"/>
+            <circle cx="180" cy="320" r="1.6"/><circle cx="155" cy="350" r="1.2"/>
+            <circle cx="345" cy="345" r="1.4"/><circle cx="310" cy="390" r="1.6"/>
+            <circle cx="220" cy="395" r="1.2"/><circle cx="370" cy="300" r="1"/>
+            <circle cx="148" cy="280" r="1"/><circle cx="285" cy="190" r="1.4"/>
+            <circle cx="245" cy="410" r="1"/><circle cx="380" cy="350" r="1.2"/>
+          </g>
+          <!-- Sparkle stars -->
+          <g fill="#fff" opacity=".95">
+            <path d="M210 245 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z"/>
+            <path d="M335 355 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5 -7 -7 -2.5 7 -2.5 z"/>
+            <path d="M175 375 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z"/>
+          </g>
+          <!-- Saturn planet -->
+          <ellipse cx="260" cy="305" rx="68" ry="68" fill="url(#planetGrad)"/>
+          <ellipse cx="260" cy="310" rx="118" ry="22" fill="none" stroke="#C4B5FD" stroke-width="8" opacity=".95" transform="rotate(-22 260 310)"/>
+          <ellipse cx="260" cy="310" rx="118" ry="22" fill="none" stroke="#EADBFF" stroke-width="2" opacity=".7" transform="rotate(-22 260 310)"/>
+          <ellipse cx="240" cy="285" rx="20" ry="11" fill="#EADBFF" opacity=".4"/>
+
+          <!-- Nebulari tag -->
+          <circle cx="420" cy="245" r="11" fill="none" stroke="url(#ringMetal)" stroke-width="5"/>
+          <rect x="416" y="258" width="8" height="14" rx="3" fill="url(#ringMetal)"/>
+          <g transform="rotate(32 430 320)">
+            <rect x="378" y="262" width="106" height="38" rx="11" fill="url(#tagMetal)" stroke="#0B1220" stroke-width="2"/>
+            <text x="431" y="287" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-weight="800" font-size="16">+Nebulari</text>
+          </g>
+        </svg>
+
+        <img class="hero-img"
+             src="public/hero-keychain.png"
+             alt="Chaveiro Nebulari Saturno"
+             onerror="this.style.display='none'"/>
+
+        <span class="sparkle-out" style="top:14%; right:6%;"></span>
+        <span class="sparkle-out small" style="top:24%; left:4%;"></span>
+        <span class="sparkle-out" style="bottom:14%; right:8%;"></span>
+        <span class="sparkle-out small" style="bottom:8%; left:14%;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST BAR ============== -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-card">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6H2v12h12Z"/><path d="M14 8h4l4 4v6h-8"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+          </div>
+          <div>
+            <h4>Envio para todo o Brasil</h4>
+            <p>Entrega rápida e segura</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h4>Compra 100% segura</h4>
+            <p>Seus dados protegidos</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </div>
+          <div>
+            <h4>Embalagem especial</h4>
+            <p>Perfeito para presentear</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.21 13.89-1.21 7.11 5-3 5 3-1.21-7.11"/></svg>
+          </div>
+          <div>
+            <h4>Qualidade garantida</h4>
+            <p>Materiais selecionados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COLLECTIONS ============== -->
+  <section id="colecoes" class="collections">
+    <div class="container">
+      <div class="section-head center">
+        <span class="plus-deco">+</span>
+        <h2>Nossas coleções</h2>
+        <p>Encontre o chaveiro perfeito para o seu estilo.</p>
+      </div>
+
+      <div class="collections-grid">
+        <article class="col-card">
+          <div class="col-img">
+            <svg class="col-fallback" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="bgSpace" cx="50%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#1E1B4B"/><stop offset="100%" stop-color="#0B0820"/>
+                </radialGradient>
+              </defs>
+              <rect width="300" height="300" fill="url(#bgSpace)"/>
+              <g fill="#fff" opacity=".85">
+                <circle cx="40" cy="50" r="1"/><circle cx="80" cy="30" r="1.4"/>
+                <circle cx="240" cy="60" r="1.6"/><circle cx="270" cy="120" r="1"/>
+                <circle cx="60" cy="220" r="1.2"/><circle cx="250" cy="240" r="1.4"/>
+                <circle cx="30" cy="160" r="1"/><circle cx="200" cy="40" r="1"/>
+                <path d="M210 90 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z"/>
+                <path d="M50 100 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z"/>
+              </g>
+              <circle cx="150" cy="55" r="18" fill="none" stroke="#D1D5DB" stroke-width="6"/>
+              <rect x="146" y="75" width="8" height="18" rx="2" fill="#9CA3AF"/>
+              <g transform="translate(110 100)">
+                <circle cx="40" cy="40" r="34" fill="#fff"/>
+                <path d="M14 40 a26 26 0 0 1 52 0 a26 26 0 0 1 -52 0" fill="#1E1B4B"/>
+                <ellipse cx="48" cy="32" rx="10" ry="6" fill="#A78BFA" opacity=".7"/>
+                <rect x="14" y="72" width="52" height="46" rx="14" fill="#fff"/>
+                <circle cx="40" cy="92" r="6" fill="#A78BFA"/>
+                <rect x="-2" y="74" width="20" height="40" rx="10" fill="#fff"/>
+                <rect x="62" y="74" width="20" height="40" rx="10" fill="#fff"/>
+                <rect x="18" y="114" width="20" height="36" rx="8" fill="#fff"/>
+                <rect x="42" y="114" width="20" height="36" rx="8" fill="#fff"/>
+              </g>
+              <g transform="translate(220 200)">
+                <circle cx="0" cy="-30" r="6" fill="none" stroke="#D1D5DB" stroke-width="3"/>
+                <path d="M0 -10 L8 6 L26 8 L12 20 L16 38 L0 28 L-16 38 L-12 20 L-26 8 L-8 6 Z" fill="#FBBF24" stroke="#F59E0B" stroke-width="1.5"/>
+              </g>
+            </svg>
+            <img src="public/4.jpg"
+                 alt="Coleção Espaciais"
+                 onerror="this.style.display='none'"/>
+          </div>
+          <div class="col-body">
+            <div>
+              <h3>Espaciais</h3>
+              <p>Para quem ama o infinito</p>
+            </div>
+            <a class="col-arrow" href="#" aria-label="Ver coleção Espaciais">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="col-card">
+          <div class="col-img">
+            <svg class="col-fallback" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="rockBg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7C5536"/><stop offset="100%" stop-color="#3F2A1B"/>
+                </linearGradient>
+                <radialGradient id="compassFace" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#FCE7B3"/><stop offset="100%" stop-color="#92651E"/>
+                </radialGradient>
+              </defs>
+              <rect width="300" height="300" fill="url(#rockBg)"/>
+              <g fill="#0E0904" opacity=".25">
+                <circle cx="40" cy="80" r="20"/><circle cx="260" cy="60" r="30"/>
+                <circle cx="70" cy="250" r="40"/><circle cx="240" cy="260" r="36"/>
+              </g>
+              <circle cx="150" cy="52" r="16" fill="none" stroke="#D1D5DB" stroke-width="5"/>
+              <rect x="146" y="70" width="8" height="14" rx="2" fill="#9CA3AF"/>
+              <circle cx="150" cy="160" r="78" fill="#1F1208" stroke="#D4A24B" stroke-width="6"/>
+              <circle cx="150" cy="160" r="64" fill="url(#compassFace)"/>
+              <g font-family="Inter" font-size="14" font-weight="800" fill="#3B2410" text-anchor="middle">
+                <text x="150" y="112">N</text><text x="150" y="216">S</text>
+                <text x="98" y="166">W</text><text x="202" y="166">E</text>
+              </g>
+              <polygon points="150,108 158,160 150,212 142,160" fill="#1F1208"/>
+              <polygon points="150,108 158,160 142,160" fill="#B91C1C"/>
+              <circle cx="150" cy="160" r="6" fill="#1F1208"/>
+            </svg>
+            <img src="public/6.jpg"
+                 alt="Coleção Aventureiros"
+                 onerror="this.style.display='none'"/>
+          </div>
+          <div class="col-body">
+            <div>
+              <h3>Aventureiros</h3>
+              <p>Explore novos caminhos</p>
+            </div>
+            <a class="col-arrow" href="#" aria-label="Ver coleção Aventureiros">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="col-card">
+          <div class="col-img">
+            <svg class="col-fallback" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="minBg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F3F4F6"/><stop offset="100%" stop-color="#D1D5DB"/>
+                </linearGradient>
+                <linearGradient id="tagBlack" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2A2A2A"/><stop offset="100%" stop-color="#0A0A0A"/>
+                </linearGradient>
+              </defs>
+              <rect width="300" height="300" fill="url(#minBg)"/>
+              <circle cx="150" cy="56" r="22" fill="none" stroke="#6B7280" stroke-width="8"/>
+              <rect x="146" y="80" width="8" height="16" rx="2" fill="#6B7280"/>
+              <rect x="105" y="96" width="90" height="160" rx="14" fill="url(#tagBlack)" stroke="#000" stroke-width="2"/>
+              <circle cx="150" cy="112" r="6" fill="#6B7280"/>
+              <text x="150" y="200" text-anchor="middle" font-family="Inter" font-weight="800" font-size="76" fill="#F9FAFB">N</text>
+            </svg>
+            <img src="public/7.jpg"
+                 alt="Coleção Minimalistas"
+                 onerror="this.style.display='none'"/>
+          </div>
+          <div class="col-body">
+            <div>
+              <h3>Minimalistas</h3>
+              <p>Simplicidade que encanta</p>
+            </div>
+            <a class="col-arrow" href="#" aria-label="Ver coleção Minimalistas">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="col-card">
+          <div class="col-img">
+            <svg class="col-fallback" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="bgGeek" cx="50%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#E9D5FF"/><stop offset="100%" stop-color="#C4B5FD"/>
+                </radialGradient>
+              </defs>
+              <rect width="300" height="300" fill="url(#bgGeek)"/>
+              <circle cx="150" cy="50" r="18" fill="none" stroke="#6B7280" stroke-width="6"/>
+              <rect x="146" y="70" width="8" height="16" rx="2" fill="#9CA3AF"/>
+              <g transform="translate(110 100)">
+                <path d="M40 0 L20 30 L0 30 Q0 90 40 100 Q80 90 80 30 L60 30 Z" fill="#111827"/>
+                <path d="M28 12 L20 28 L34 26 Z" fill="#7C3AED"/>
+                <path d="M52 12 L60 28 L46 26 Z" fill="#7C3AED"/>
+                <ellipse cx="26" cy="58" rx="6" ry="8" fill="#FBBF24"/>
+                <ellipse cx="54" cy="58" rx="6" ry="8" fill="#FBBF24"/>
+                <ellipse cx="26" cy="58" rx="1.5" ry="6" fill="#111827"/>
+                <ellipse cx="54" cy="58" rx="1.5" ry="6" fill="#111827"/>
+                <path d="M36 72 L44 72 L40 78 Z" fill="#EC4899"/>
+                <path d="M20 76 L10 74 M20 80 L10 82 M60 76 L70 74 M60 80 L70 82" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(225 200)">
+                <circle cx="0" cy="-26" r="6" fill="none" stroke="#6B7280" stroke-width="3"/>
+                <path d="M0 -10 L7 5 L22 7 L11 18 L14 33 L0 25 L-14 33 L-11 18 L-22 7 L-7 5 Z" fill="#111827" stroke="#000" stroke-width="1"/>
+              </g>
+            </svg>
+            <img src="public/10.jpg"
+                 alt="Coleção Geek & Pop"
+                 onerror="this.style.display='none'"/>
+          </div>
+          <div class="col-body">
+            <div>
+              <h3>Geek & Pop</h3>
+              <p>Sua paixão, seu estilo</p>
+            </div>
+            <a class="col-arrow" href="#" aria-label="Ver coleção Geek & Pop">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GALLERY / DESTAQUES ============== -->
+  <section id="destaques" class="gallery">
+    <div class="container">
+      <div class="section-head center">
+        <span class="plus-deco">+</span>
+        <h2>Destaques da loja</h2>
+        <p>Uma seleção dos nossos chaveiros favoritos.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="#colecoes" class="gal-card gal-wide">
+          <img src="public/1.jpg" alt="Variedade de chaveiros Nebulari" loading="lazy"/>
+          <span class="gal-tag">Variedades</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/2.jpg" alt="Chaveiro esmaltado cosmos" loading="lazy"/>
+          <span class="gal-tag">Esmaltado</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/3.jpg" alt="Chaveiro Lua" loading="lazy"/>
+          <span class="gal-tag">Lua</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/4.jpg" alt="Chaveiro Galáxia que brilha no escuro" loading="lazy"/>
+          <span class="gal-tag">Galáxia</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/6.jpg" alt="Chaveiro bússola vintage" loading="lazy"/>
+          <span class="gal-tag">Bússola</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/7.jpg" alt="Trio de chaveiros minimalistas" loading="lazy"/>
+          <span class="gal-tag">Minimalistas</span>
+        </a>
+        <a href="#personalizados" class="gal-card">
+          <img src="public/8.jpg" alt="Chaveiro de couro com monograma" loading="lazy"/>
+          <span class="gal-tag">Monograma</span>
+        </a>
+        <a href="#colecoes" class="gal-card">
+          <img src="public/9.jpg" alt="Chaveiro tech com teclado, notebook e mouse" loading="lazy"/>
+          <span class="gal-tag">Tech</span>
+        </a>
+        <a href="#colecoes" class="gal-card gal-wide">
+          <img src="public/10.jpg" alt="Chaveiros geek e pop culture" loading="lazy"/>
+          <span class="gal-tag">Geek & Pop</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WHY US ============== -->
+  <section id="sobre" class="why">
+    <div class="container why-inner">
+      <div class="why-left">
+        <span class="pill">
+          <span class="pill-dot">+</span>
+          QUALIDADE QUE VOCÊ SENTE
+        </span>
+        <h2>Por que escolher<br/>a <span class="text-accent">Nebulari?</span></h2>
+        <p>Mais do que chaveiros, entregamos experiências.<br/>Cada detalhe é pensado para surpreender você.</p>
+        <a href="#sobre" class="btn btn-primary btn-sm">
+          Conheça mais sobre nós
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15.09 8.26 22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg>
+          </div>
+          <h4>Design exclusivo</h4>
+          <p>Criações originais que você só encontra aqui.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9Z"/><path d="M11 3 8 9l4 12 4-12-3-6"/><path d="M2 9h20"/></svg>
+          </div>
+          <h4>Materiais premium</h4>
+          <p>Metal, couro, acrílico e muito mais. Sempre o melhor.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"/></svg>
+          </div>
+          <h4>Feito com propósito</h4>
+          <p>Cada chaveiro carrega significado e inspiração.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg>
+          </div>
+          <h4>Para todos os momentos</h4>
+          <p>Do dia a dia às grandes lembranças.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TESTIMONIALS ============== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head center">
+        <span class="plus-deco">+</span>
+        <h2>O que nossos clientes dizem</h2>
+      </div>
+      <div class="testimonials-wrap">
+        <button class="t-nav t-prev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="testimonials-grid">
+          <article class="t-card">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-mark" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 32V18C4 9.16 9.16 4 18 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4H6c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+              <path d="M22 32V18C22 9.16 27.16 4 36 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4h-10c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+            </svg>
+            <p>"Qualidade impecável e acabamento lindo! O chaveiro é ainda mais bonito pessoalmente."</p>
+            <div class="t-author">
+              <span class="avatar avatar-1">
+                <img src="public/avatar-juliana.png"
+                     data-ai="https://image.pollinations.ai/prompt/portrait%20brazilian%20woman%2030%20smiling%20natural%20light%20friendly?width=160&height=160&seed=101&nologo=true"
+                     alt=""
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src=this.dataset.ai}else{this.style.display='none'}"/>
+              </span>
+              <div>
+                <strong>Juliana R.</strong>
+                <span>São Paulo, SP</span>
+              </div>
+            </div>
+          </article>
+          <article class="t-card">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-mark" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 32V18C4 9.16 9.16 4 18 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4H6c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+              <path d="M22 32V18C22 9.16 27.16 4 36 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4h-10c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+            </svg>
+            <p>"Chegou super rápido e muito bem embalado. Já é o meu segundo pedido!"</p>
+            <div class="t-author">
+              <span class="avatar avatar-2">
+                <img src="public/avatar-lucas.png"
+                     data-ai="https://image.pollinations.ai/prompt/portrait%20brazilian%20man%2030%20smiling%20natural%20light%20friendly?width=160&height=160&seed=202&nologo=true"
+                     alt=""
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src=this.dataset.ai}else{this.style.display='none'}"/>
+              </span>
+              <div>
+                <strong>Lucas M.</strong>
+                <span>Curitiba, PR</span>
+              </div>
+            </div>
+          </article>
+          <article class="t-card">
+            <div class="stars">★★★★★</div>
+            <svg class="quote-mark" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 32V18C4 9.16 9.16 4 18 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4H6c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+              <path d="M22 32V18C22 9.16 27.16 4 36 4v6c-4.42 0-8 3.58-8 8h6c2.21 0 4 1.79 4 4v6c0 2.21-1.79 4-4 4h-10c-1.1 0-2-.9-2-2Z" fill="currentColor"/>
+            </svg>
+            <p>"Comprei para presentear e a pessoa amou! Muito delicado e cheio de significado."</p>
+            <div class="t-author">
+              <span class="avatar avatar-3">
+                <img src="public/avatar-camila.png"
+                     data-ai="https://image.pollinations.ai/prompt/portrait%20brazilian%20woman%2025%20smiling%20natural%20light%20friendly%20long%20hair?width=160&height=160&seed=303&nologo=true"
+                     alt=""
+                     onerror="if(!this.dataset.tried){this.dataset.tried=1;this.src=this.dataset.ai}else{this.style.display='none'}"/>
+              </span>
+              <div>
+                <strong>Camila T.</strong>
+                <span>Belo Horizonte, MG</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="t-nav t-next" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== NEWSLETTER ============== -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-left">
+          <div class="newsletter-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          </div>
+          <div>
+            <h3>Receba novidades e ofertas exclusivas</h3>
+            <p>Cadastre-se e fique por dentro das novidades da Nebulari.</p>
+          </div>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="Seu melhor e-mail" required />
+          <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <svg class="newsletter-planet" viewBox="0 0 240 240">
+          <defs>
+            <radialGradient id="planNs" cx="38%" cy="36%" r="70%">
+              <stop offset="0%" stop-color="#DDD6FE"/>
+              <stop offset="55%" stop-color="#7C3AED"/>
+              <stop offset="100%" stop-color="#2E1065"/>
+            </radialGradient>
+          </defs>
+          <ellipse cx="120" cy="120" rx="170" ry="34" fill="none" stroke="#A78BFA" stroke-width="5" opacity=".85" transform="rotate(-22 120 120)"/>
+          <circle cx="120" cy="120" r="70" fill="url(#planNs)"/>
+          <ellipse cx="120" cy="120" rx="170" ry="34" fill="none" stroke="#EADBFF" stroke-width="2" opacity=".7" transform="rotate(-22 120 120)" stroke-dasharray="8 8"/>
+          <ellipse cx="100" cy="100" rx="20" ry="10" fill="#EADBFF" opacity=".4"/>
+        </svg>
+        <span class="ns-sparkle" style="top:18%; left:48%"></span>
+        <span class="ns-sparkle small" style="top:64%; left:55%"></span>
+        <span class="ns-sparkle small" style="top:30%; right:6%"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer id="contato" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col footer-brand">
+        <a href="#" class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" fill="none">
+              <ellipse cx="16" cy="16" rx="9" ry="9" fill="#7C3AED"/>
+              <ellipse cx="16" cy="16" rx="14" ry="4" stroke="#7C3AED" stroke-width="2.2" transform="rotate(-22 16 16)"/>
+            </svg>
+          </span>
+          <span class="brand-name">Nebulari</span>
+        </a>
+        <p>Chaveiros que conectam estilos, momentos e histórias.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.55a8.16 8.16 0 0 0 4.77 1.52V6.69h-1.84Z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.43.04-3.47.22-.93 1.4-5.94 1.4-5.94s-.36-.72-.36-1.78c0-1.67.97-2.92 2.17-2.92 1.03 0 1.52.77 1.52 1.7 0 1.03-.66 2.58-1 4.01-.28 1.2.6 2.18 1.78 2.18 2.14 0 3.78-2.26 3.78-5.51 0-2.88-2.07-4.9-5.03-4.9-3.43 0-5.44 2.57-5.44 5.23 0 1.04.4 2.15.9 2.76.1.12.11.22.08.34l-.34 1.38c-.05.22-.18.27-.4.16-1.5-.7-2.43-2.88-2.43-4.64 0-3.78 2.74-7.25 7.9-7.25 4.15 0 7.37 2.96 7.37 6.91 0 4.12-2.6 7.44-6.21 7.44-1.21 0-2.35-.63-2.74-1.37l-.75 2.85c-.27 1.04-1 2.35-1.49 3.14A12 12 0 1 0 12 0Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <a href="#inicio">Início</a>
+        <a href="#colecoes">Coleções</a>
+        <a href="#personalizados">Personalizados</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="footer-col">
+        <h5>Ajuda</h5>
+        <a href="#">Perguntas frequentes</a>
+        <a href="#">Política de Troca</a>
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Acompanhe seu pedido</a>
+      </div>
+      <div class="footer-col">
+        <h5>Institucional</h5>
+        <a href="#">Quem somos</a>
+        <a href="#">Nossos materiais</a>
+        <a href="#">Sustentabilidade</a>
+      </div>
+      <div class="footer-col">
+        <h5>Formas de pagamento</h5>
+        <div class="payments">
+          <span class="pay pay-visa">VISA</span>
+          <span class="pay pay-mc"><span></span><span></span></span>
+          <span class="pay pay-elo">elo</span>
+          <span class="pay pay-amex">AMEX</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2024 Nebulari. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
